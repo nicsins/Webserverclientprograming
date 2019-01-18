@@ -1,0 +1,154 @@
+#favorite-movie-title {
+    font-size: larger;
+    font-style: italic;
+
+}
+#favorite-music-artist-name{
+    font-style: italic;
+    font-size: 150%;
+    color:lime ;
+    font-weight: bold;
+}
+#favorite-music-artist-name:hover, #favorite-movie-title:hover {
+    font-stretch: extra-expanded;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 350%;
+
+
+}
+
+
+#wrapper{
+    width: 900px;
+    height: 1200px;
+    background-color: lightgray;
+    padding:15px;
+    box-sizing: border-box;
+    margin:auto;}
+
+#bottom{
+    text-align: center;
+    border-bottom-width: thick;
+    border-bottom-style: groove;
+    border-radius: 85%;
+}
+
+
+.section-header{
+    font-style: oblique;
+    font-family:Georgia,sans-serif;
+    font-size: 20px;
+    alignment: center;
+
+}
+
+
+
+.fav-section
+{
+    background-color: blue;
+    color: #fff;
+    background: radial-gradient(blue 15%, beige);
+}
+
+.favorite-food-section{
+    background-color: lightcyan;
+    color: gold;
+    text-shadow: 2px 2px 2px white;
+    background: radial-gradient(beige 5% ,lightblue);
+}
+
+.box {
+    size: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+    margin: 20px 40px 20px 40px;
+}
+
+
+.thick-blue-border {
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 70%;
+}
+
+div h2{
+
+    font-family: Lobster ,"Comic Sans MS", sans-serif;
+    alignment: center;
+    font-size: 200%;
+
+}
+a{
+     color: yellow;
+    text-decoration: none;
+
+}
+span:hover{
+    font-stretch: extra-expanded;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 350%;
+}
+
+a:hover, li:hover{
+     font-size: 150%;
+     font-style: italic;
+     font-stretch:expanded;
+     font-weight: bolder;
+ }
+/*li:hover{*/
+    /*font-size: 150%;*/
+    /*font-style: italic;*/
+    /*font-stretch:expanded;*/
+    /*font-weight: bolder;*/
+/*}*/
+body{
+
+    font-family: "Comic Sans MS", "Segoe Print","Droid Sans Mono Dotted",sans-serif;
+    font-style: unset;
+    font-size: 20px;
+    color: blue;
+    margin: auto;
+    padding: auto;
+    alignment: center;
+}
+title{
+    font-size: 12px;
+}
+h1  {
+    font-family: Lobster, "Comic Sans MS",sans-serif;
+    font-size: 200%;
+    alignment: center;
+}
+ul
+{   font-size: 200%;
+    list-style-type: none;
+}
+tr{ border-bottom: darkblue 3px solid;}
+
+
+
+
+img{
+    height:100px;
+    width: 100px;
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 70%;
+
+}
+
+iframe{
+    height: 420px;
+    width: 315px;
+    border: navy 5px solid ;
+}
+
+
+
