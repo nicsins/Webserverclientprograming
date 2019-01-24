@@ -1,0 +1,54 @@
+#wrapper{
+    alignment: center;
+    width: 600px;
+    height: 1000px;
+    background-color: lightgray;
+    padding:30px;
+    box-sizing: border-box;
+    margin:auto;}
+
+
+#test-only{
+    font-family: "Droid Sans Mono Dotted", serif;
+    color: lime;
+    font-weight: bold;
+    font-size: 200%;
+    height: 290px;width: 250px;
+    border: solid 3px red;
+    background-color: red;
+}
+#test-only:hover{
+    color: transparent;
+    background-image: url("../img/keep-calm-its-only-a-test.png");}
+#real-alert{
+    font-family: "Droid Sans Mono Dotted", serif;
+    color: blue;
+    font-weight: bold;
+    font-size: 200%;
+    height: 250px;width: 250px;
+    border: solid 3px beige;
+    background-color: beige;
+}
+#real-alert:hover{
+    color: transparent;
+    background-image: url("../img/notatest.jpg");
+}
+.box {
+
+    width:500px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    background: linear-gradient(red ,lightblue  ,beige);
+}
+#head{
+    font-size:400%;
+    font-family: "Lobster", serif ;
+    font-weight: bold;
+    font-stretch: expanded;
+    color:lightskyblue;
+    text-shadow: 2px,2px,4px,blue;
+}
