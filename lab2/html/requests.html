@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Registration</title>
+    <link rel="icon" href="../img/Favinic.png" >
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/requests.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Staatliches" rel="stylesheet">
+
+</head>
+
+<body id="wrapper">
+<form class="box">
+    <h1><b>Request Form</b></h1>
+    <label for="name">Enter your name</label>
+<input id="name" type="text" maxlength="70" required>
+
+<br>
+<label for="pwd">Password</label>
+<input type="password" id="pwd" required>
+
+<br>
+<label for="email">Email</label>
+<input type="email" id="email" required>
+<br>
+<label>Would you like to recieve emails from our sponsors?</label>
+<br>
+Yes<input type="radio" name="getemail" id="yes">
+No<input type="radio" name="getemail" id="no">
+<br>
+<label for="bday">Date of Birth</label>
+<input type="date" id="bday">
+<br>
+<label for="tshrt">Select Tshirt size</label>
+<select id="tshrt">
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+    <option value="xlrg">X-Large</option>
+</select>
+<br>
+<label>What time/s will you be attending?</label>
+<br>
+<label for="morn">morning</label><input id="morn" type="checkbox" checked>
+<label for="day">afternoon</label><input id="day" type="checkbox">
+<br>
+<label for="requests">Please enter any special requests below</label>
+<br>
+<textarea name="" id="requests"  rows="7" cols="40"></textarea>
+</form>
+
+
+
+
+
+
+
+</body>
+</html>

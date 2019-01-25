@@ -4,7 +4,7 @@
 
 #wrapper{
     alignment: center;
-    width: 600px;
+    width: 900px;
     height: 1000px;
     background-color: lightgray;
     padding:30px;
@@ -12,20 +12,15 @@
     margin:auto;
     display: block}
 
-#bottom{
-    text-align: center;
-    border-bottom-width: thick;
-    border-bottom-style: groove;
 
-}
 
 
 .box {
-    width:500px;
+    width:600px;
     border-style: solid;
     border-color: black;
     border-width: 5px;
-    text-align: center;
+    text-align: left;
     padding: 10px 10px 10px 10px;
     border-radius: 5px;
     background: linear-gradient(lightblue  ,beige);
@@ -38,7 +33,7 @@
 div form  h2{
 
     font-family: Lobster ,"Comic Sans MS", sans-serif;
-    alignment: center;
+    alignment:left;
     font-size: 200%;
     text-shadow: 2px 2px 3px gold;
 
@@ -47,6 +42,7 @@ div form  h2{
     width: 100px;
     background: lightcyan;
     border: darkblue 2px solid;
+    /*alignment: center;*/
 
 }
 .submit:hover{

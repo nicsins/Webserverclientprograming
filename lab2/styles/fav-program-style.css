@@ -22,7 +22,7 @@
     background: linear-gradient(lightblue, beige);
 }
 .box2{
-    alignment: center;
+    /*alignment: center;*/
 
     border-style: solid;
     border-color: black;

@@ -1,56 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>lab2</title>
     <link rel="icon" href="../img/Favinic.png">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/style.css">
+
 </head>
-<body>
+<body id="wrapper">
+<main class="box">
 
         <p>
 
           <form>
-              Enter your name<input type="text">
+              <<label for="name">Enter your name</label><input id="name" type="text">
             <br>
-            Enter your email<input type="email">
+            <<label for="email">Enter your email</label><input id="email" type="email">
             <br>
-            What's your lucky number?><input type="number">
+            <label for="num"> What's your lucky number?</label><input id="num" type="number" >
             <br>
-            What is your birthdate?<input type="date">
+            <label for="bday">What is your birthdate?</label><input id="bday" type="date">
             <br>
-            Select a number from this range<input type="range">
+            <label for="range">Select a number from this range</label><input id="range" type="range">
             <br>
-            What's your favorite color<input type="color">
+            <label for="col">What's your favorite color</label><input id="col" type="color">
             <br>
-            What's the secret password<input type="password">
+            <label for="pwd">What's the secret password</label><input id="pwd" type="password">
             <br>
-            search<input type="search">
+            <label for="search">search</label><input  id="search" type="search">
             <br>
-            <label>What's your favorite joke??
+            <label for="joke" >What's your favorite joke??
             </label>
             <br>
-            <textarea name="joke" id="joke" cols="" rows=""></textarea>
-
-            <p><br>What's your favorite weather?? <select name="" id="">
-                <options>Sunny</options>
-                <options>Rainy</options>
-                <options>Snowy</options>
-                <options>Foggy</options>
+            <textarea name="joke" id="joke" cols="30" rows="2"></textarea >
+</form>
+            <label for="choice">whay's your favorite weather?
+             <select id="choice" name="choice">
+                <option  value="sunny">Sunny</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+                <option value="foggy">Foggy</option>
             </select>
-        </p>
-            <br>Please provide any additional info
+        </label>
+    <br>Please provide any additional info
         <br>
-        <textarea name="xtra" id="ixtra" cols="100" rows="12"></textarea>
+        <textarea name="xtra" id="ixtra" cols="40" rows="12"></textarea>
 
-        <p>Coke or Pepsi?
+        <p><label  >Coke or Pepsi?</label>
                 <br>Coke<input type="radio" name="soda" id="Coke">
-                <br>Pepsi<input type="radio" name="soda" id="Pepsi"></form>
+                <br>Pepsi<input type="radio" name="soda" id="Pepsi">
             </p>
-        <infobar></infobar>
+
 
 
 
         </p>
-
+</main>
 </body>
 </html>
