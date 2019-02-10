@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Items to a list</title>
+</head>
+<body>
+<p>please enter item you want to add to the list</p>
+
+
+
+<input id="text-input">
+
+<button id="add-text">Add</button>
+
+
+
+<ul id="list">
+
+    <!-- items will go here when button clicked -->
+
+</ul>
+
+<script>
+
+
+
+    document.querySelector('#add-text').addEventListener('click', function() {
+
+        // Read text from the input
+
+        let textInput = document.querySelector('#text-input')
+
+        let text = textInput.value
+
+        // Make new <li> element
+
+        let newListItem = document.createElement('li')
+
+        newListItem.innerHTML = text
+
+
+
+        // Find the unordered list
+
+        let list = document.querySelector('#list')
+
+        list.appendChild(newListItem)
+
+
+
+        // Clear text input
+
+        textInput.value = ''
+
+
+
+    })
+
+
+
+
+
+</script>
+</body>
+</html>

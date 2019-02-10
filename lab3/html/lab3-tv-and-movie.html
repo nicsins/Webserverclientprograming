@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavsScript Functions with Arguments</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        .tv-show {
+            color: green
+        }
+        .movie {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- Starter page for Lab 3 -->
+
+<form id="#" method="post"><p>Enter a TV show (or movie) you like.</p>
+<label for="show-name"></label><input oninput="isvalid()" id="show-name">
+<input id="is-movie" type="checkbox"><label for="is-movie">Check this box if it is a movie?</label>
+<button id="save">Save to list</button></form>
+
+<ul id="list">
+
+</ul>
+
+<script>
+
+    var list = document.querySelector('#list');
+    var form = document.querySelector('form');
+    var field = document.querySelector('#show-name');
+    var    save=document.querySelector('save');
+
+
+
+    if (list.contains(field.value)){
+        alert('this show is already in the list');
+        field.value="";
+        field.focus();
+
+    }
+
+
+    function isvalid() {    field.addEventListener('click',function () {
+        if (field.length < 1 || field.length > 50){
+            alert('Item must be between 2 -50 chars');
+            return false; }
+        else {
+            return true;
+        }
+
+    });
+
+
+    }
+
+    (function validate(){
+
+        let list = document.querySelector( '#list' ),
+            form = document.querySelector( 'form' ),
+            field = document.querySelector( '#show-name' );
+        var    save=document.querySelector('save');
+
+
+
+        form.addEventListener( 'submit', function( ev ) {
+
+            var checked = document.getElementById("is-movie").checked;
+
+            let check= "&#10004";
+            if (checked){
+
+                list.innerHTML += '<li class="movie">'+check +field.value + '</li>';
+                field.value = '';
+                field.focus();
+                ev.preventDefault();
+            }else{
+            list.innerHTML += '<li class="tv-show">' + field.value + '</li>';
+            field.value = '';
+            field.focus();
+            ev.preventDefault();}
+        }, false);
+    })();
+    // Script goes here
+    /*
+    This program is for creating a list of movies and TV shows.
+    When the button is clicked, read the name of the TV show or movie from the input.
+    And, find out if the is-movie input checkbox is checked.
+    You'll need to use the checked property, not the value property. https://www.w3schools.com/jsref/prop_checkbox_checked.asp
+    Create a new <li> element containing the name of the show/movie, the value of the text input
+    If the show is a TV show (the checkbox is unchecked), add the class tv-show
+    If the show is a movie, (the checkbox is checked) add the class movie
+    You can set the .className property of an element to set its class, https://www.w3schools.com/jsref/prop_html_classname.asp
+    Add the new li element to the list.
+    Clear the input and un-check the checkbox.
+    Notice that there is some CSS provided which applies one color to elements with
+    class movie, and a different color to tv-show. You may change the styles if you prefer.
+    Finally, include some validation. Ignore any empty inputs.
+    (Tricky part) And, show an alert message if the show/movie is already in the list.
+    Don't add the show/movie again.
+    */
+</script>
+
+</body>
+</html>

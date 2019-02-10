@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do List</title>
+    <link rel="icon" href="../img/Favinic.png">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/todo.css">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+
+
+</head>
+<body>
+<header><h1>Here is your todo list !</h1></header>
+<section>
+    <ul id="list"></ul>
+    <form action="#" method="post">
+        <div>
+            <label for="newitem">Add item</label>
+            <input type="text" name="newitem" id="newitem"
+                   placeholder="new item" maxlength="50 " minlength="2" required>
+            <input type="submit" value="Add">
+        </div>
+    </form>
+</section>
+<footer>
+</footer>
+<script>
+    (function validate(){
+
+        var todo = document.querySelector( '#todolist' ),
+            form = document.querySelector( 'form' ),
+            field = document.querySelector( '#newitem' );
+        field.addEventListener('click',function () {
+            if (field.length < 1 || field.length > 50){
+                alert('Item must be between 2 -50 chars');
+           return false; }
+           else {
+               return true;
+            }
+
+        });
+        form.addEventListener( 'submit', function( ev ) {
+            todo.innerHTML += '<li>' + field.value + '</li>';
+            field.value = '';
+            field.focus();
+            ev.preventDefault();
+        }, false);
+
+        todo.addEventListener( 'click', function( ev ) {
+            var t = ev.target;
+            if ( t.tagName === 'LI' ) {
+                if ( t.classList.contains( 'done' ) ) {
+                    t.parentNode.removeChild( t );
+                } else {
+                    t.classList.add( 'done' );
+                }
+            }
+            ev.preventDefault();
+        }, false);
+
+    })();
+</script>
+</body>
+</html>

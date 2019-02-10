@@ -1,0 +1,91 @@
+
+
+
+
+#wrapper{
+    alignment: center;
+    width: 900px;
+    height: 1000px;
+    background-color: lightgray;
+    padding:30px;
+    box-sizing: border-box;
+    margin:auto;
+    display: block}
+
+
+
+
+.box {
+    width:600px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: left;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    background: linear-gradient(lightblue  ,beige);
+    overflow:auto;
+}
+
+
+
+
+div form  h2{
+
+    font-family: Lobster ,"Comic Sans MS", sans-serif;
+    alignment:left;
+    font-size: 200%;
+    text-shadow: 2px 2px 3px gold;
+
+}
+.submit{ height: 25px;
+    width: 100px;
+    background: lightcyan;
+    border: darkblue 2px solid;
+    /*alignment: center;*/
+
+}
+.submit:hover{
+
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+
+body{
+
+    font-family: "Comic Sans MS", "Segoe Print","Droid Sans Mono Dotted",sans-serif;
+    font-style: unset;
+    font-size: 20px;
+    color: blue;
+    margin: auto;
+    padding: auto;
+    alignment: center;
+}
+title{
+    font-size: 12px;
+}
+h1  {
+    font-family: Lobster, "Comic Sans MS",sans-serif;
+    font-size: 200%;
+    alignment: center;
+}
+
+
+
+
+
+img{
+    height:100px;
+    width: 100px;
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 70%;
+
+}
+
+
+

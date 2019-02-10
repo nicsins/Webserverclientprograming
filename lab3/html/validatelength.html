@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name Form</title>
+</head>
+<body>
+
+<p>Please enter text in the space below</p>
+<input type="text" id="text">
+<button id="save-text">Input text</button>
+
+<p id="welcome_message"></p>
+
+<script>
+    document.querySelector('#save-text').addEventListener('click', function() {
+        let name = document.querySelector("#username").value
+        let messageElement = document.querySelector("#welcome_message")
+        if (name.length < 2) {
+            messageElement.innerHTML = 'Your entery  must be at least 1 letters no longer than 50'
+        } else {
+            messageElement.innerHTML = `ite number Welcome, ${name}!`
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change property</title>
+</head>
+<body>
+<button>Click Me</button>
+<script>
+
+    let button =document.querySelector('button');
+
+    button.innerHTML='please click the button';
+
+    let alertText="You Clicked The Button";
+
+    button.addEventListener('click',function () {
+        alert('you clicked the button !');
+        button.innerHTML='The button was clicked'
+    })
+</script>
+
+</body>
+</html>

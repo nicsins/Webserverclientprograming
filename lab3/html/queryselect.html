@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>query selector</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<h1>Click on the header</h1>
+
+<p>Some <code class="function-name">querySelector</code> and
+
+    <code class="function-name">querySelectorAll</code> examples.</p>
+
+<h1>Or click on this header</h1>
+
+<p>Use CSS selectors to find elements on page.</p>
+
+
+
+<p id="conclusion">These functions are useful for more specific selections.</p>
+
+
+
+<script>
+
+
+
+    // querySelectorAll returns an array
+
+    var allHeaders = document.querySelectorAll('h1');
+
+
+
+    // So can forEach loop over the array of matching elements
+
+    allHeaders.forEach(function(header) {
+
+        header.addEventListener('click', function(){
+
+            alert('Click!')
+
+        });
+
+    });
+
+
+
+    // querySelector returns the first match
+
+    var firstHeader = document.querySelector('h1');
+
+    firstHeader.style.color = 'magenta';   // This only changes the first header
+
+
+
+    // querySelector and querySelectorAll can select by class
+
+    // Note use of dot notations .className
+
+    var codeExamples = document.querySelectorAll('.function-name');
+
+    // And process the resulting element or array
+
+    codeExamples.forEach(function(element){
+
+        console.log(element.innerHTML);
+
+    });
+
+
+
+
+
+    // And by id. Use querySelector since you'll get 0 or 1 element.
+
+    // Note use of # notation, #id
+
+    var lastPara = document.querySelector('#conclusion');
+
+    console.log(lastPara)
+
+
+
+    // Or write complex selectors - review a CSS selector reference
+
+
+
+</script>
+
+</body>
+</html>

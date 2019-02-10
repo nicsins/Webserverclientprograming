@@ -1,0 +1,68 @@
+#wrapper{
+    alignment: center;
+    width: 900px;
+    height: 1000px;
+    background-color: lightgray;
+    padding:30px;
+    box-sizing: border-box;
+    margin:auto;
+    display: block}
+
+
+
+
+.box {
+    width: 700px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    background: linear-gradient(lightblue, beige);
+}
+.box2{
+    /*alignment: center;*/
+
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    background: linear-gradient(lightblue, lightskyblue);
+
+
+}
+a{
+
+    text-decoration: beige none;
+}
+a:hover{
+    text-decoration: beige none;
+}
+#head{
+    font-size:300%;
+   text-align: center;
+    font-weight: bold;
+    font-stretch: expanded;
+    color:gold;
+    text-shadow: 3px,3px,6px,blue;
+}
+body {
+    font-family: 'Baloo Thambi', cursive;
+}
+
+a img:hover{
+   border: 3px solid green;
+
+}
+h1{
+    font-size: 200%;
+    font-stretch: semi-expanded;
+    font-weight: bold;
+
+}
+
+
+

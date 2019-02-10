@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1 id ="num-pix"></h1>
+
+<script>
+
+    var num_pix_para=document.querySelector("#num-pix");
+    var num_pixels=window.innerWidth * window.innerWidth;
+    num_pix_para.innerHTML="Number of pixels in your browser window is "+ num_pixels;
+    //event l;istener on resize!!
+    window.addEventListener("resize", windowWasResized);
+    function windowWasResized() {
+        alert("You re-sized the window!");
+
+        num_pix_para=document.getElementById("num-pix");
+        num_pixels=window.innerHeight * window.innerWidth;
+        num_pix_para.innerHTML="Number of pixels in your browser window is "+ num_pixels;
+
+    }
+</script>
+
+</body>
+
+</html>

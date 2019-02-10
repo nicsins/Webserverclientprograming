@@ -21,8 +21,8 @@
 
 #wrapper{
     display: block;
-    width: 900px;
-    height: 1200px;
+    width: 1200px;
+    height: 900px;
     background-color: lightgray;
     padding:15px;
     box-sizing: border-box;
@@ -150,6 +150,56 @@ iframe{
     width: 315px;
     border: navy 5px solid ;
 }
+/*nav bar style*/
+
+#nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#nav_menu ul li {
+    float: left;
+}
+#nav_menu ul li form{
+    display: block;
+    width: 234px;
+    text-align: center;
+    padding: 1em 0;
+    color: white;
+    font-weight: bold;
+
+}
+#nav_menu button{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Lobster, "Comic Sans MS", sans-serif;
+    text-shadow: gold 1px  1px 2px;
+    font-size: 25px;
+    background:beige;
+    color:blue;
+    border-radius: 10px;
 
 
+}
+
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+    float: none;
+}
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
 

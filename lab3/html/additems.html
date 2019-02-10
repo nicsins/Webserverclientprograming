@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add items</title>
+</head>
+<body>
+
+<button id="add">Add items to the list</button>
+
+<button id="clear">Clear list</button>
+
+
+
+<h1>A list of items</h1>
+
+
+
+<!--Unordered list, empty when the page loads -->
+
+<ul id="my-list">
+
+</ul>
+
+
+
+<script>
+
+
+
+    // Keep track of how many elements have been added
+
+    let newItemNumber = 1
+
+
+
+    // Find the add button, and add a click listener
+
+    document.querySelector('#add').addEventListener('click', function() {
+
+        // Find the ul list by the id. Note the # in the selector
+
+        let my_list_element = document.querySelector("#my-list")
+
+        //Make a new HTML element for this document, of type <li>
+
+        var new_list_item = document.createElement("li")
+
+        // Configure properties of this element. innerHTML can be any text or HTML
+
+        // Format strings use backticks, and ${var} notation
+
+        new_list_item.innerHTML = `New item ${newItemNumber}`
+
+        // Add the new item to as a new child to the unordered list
+
+        my_list_element.appendChild(new_list_item);
+
+        // Increase the count of items added, for the next item
+
+        newItemNumber++;
+
+    })
+
+
+
+    document.querySelector('#clear').addEventListener('click', function() {
+
+        let my_list_element = document.querySelector("#my-list")
+
+        my_list_element.innerHTML = ''
+
+        newItemNumber = 1
+
+    })
+
+
+
+</script>
+
+
+
+</body>
+</html>

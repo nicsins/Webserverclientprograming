@@ -1,0 +1,31 @@
+#wrapper{
+    alignment: center;
+    width: 600px;
+    height: 1000px;
+    background-color: lightgray;
+    padding:30px;
+    box-sizing: border-box;
+    margin:auto;
+    display: block}
+
+.box {
+    font-family: 'Staatliches', cursive;
+    width: 400px;
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: left;
+    color: darkred;
+
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+    background: linear-gradient(lightpink, sandybrown,beige);
+    overflow: auto;
+}
+
+.align{
+    alignment: center;}
+h1{
+    font-stretch: semi-expanded;
+    font-family: 'Anton', sans-serif;
+}

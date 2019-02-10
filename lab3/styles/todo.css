@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+footer, section, header, aside, figure {
+    display: block;
+}
+body {
+    padding: 2em;
+    font-size: 15px;
+    font-family: helvetica, arial, sans-serif;
+}
+form {
+    width: 280px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+#newitem {
+    width: 160px;
+}
+#list {
+    width: 280px;
+    margin: 10px;
+}
+#list li {
+    border-radius: 2px;
+    list-style: none;
+    background: #eee;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    position: relative;
+}
+#list li:nth-child(2n){
+    background: #ccc;
+}
+#list li:hover:after,
+#list li.done:after {
+    content: '✔';
+    color: #060;
+    position: absolute;
+    right: 5px;
+}
+#list li.done:hover:after {
+    content: 'x';
+    font-weight: bold;
+    color: #c00;
+    position: absolute;
+    right: 5px;
+}
+.tv-show {
+    color: green
+}
+.movie {
+    color: red;
+}

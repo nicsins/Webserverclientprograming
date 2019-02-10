@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Name Form</title>
+
+</head>
+
+<body>
+
+
+
+<p>Please enter your name</p>
+
+<input type="text" id="username">
+
+<button id="save-user-name">Save</button>
+
+
+
+<p id="welcome_message"></p>
+
+
+
+<script>
+
+
+
+    document.querySelector('#save-user-name').addEventListener('click', function() {
+
+        let name = document.querySelector("#username").value
+
+        document.querySelector("#welcome_message").innerHTML = `Welcome, ${name}!`
+
+    })
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
