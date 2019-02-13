@@ -1,4 +1,6 @@
 var classes=['microsoft server','software develment projects','web client server'];
+classes.push('linux');
+
 classes.forEach(function (el) {{
     console.log(el);
 }
@@ -18,3 +20,4 @@ for (var i=0 ; i< classes.length-1;i++){
         longest= classes[i+1];
     }
 } console.log(longest);
+

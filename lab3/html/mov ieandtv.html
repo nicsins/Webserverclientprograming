@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/todo.css">
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -17,34 +17,38 @@
     <form action="#" method="post">
         <div>
             <label for="newitem">Add item</label>
-            <input type="text" name="newitem" id="newitem"
+            <input type="text" name="newitem" id="newitem" onsubmit="check_for_item() "
                    placeholder="new item" maxlength="50 " minlength="2" required>
             <br>
             <input id="is-movie" type="checkbox"><label for="is-movie">Check this box if it is a movie?</label>
             <br>
-            <input type="submit" value="save">
+            <input type="submit" name="save" value="save" >
         </div>
     </form>
 </section>
 <footer>
 </footer>
 <script>
+        var lis=document.querySelectorAll('li');
+      function check_for_item(text) {
+         field.addEventListener('submit',function(){
+        if (field.value in lis.entries()){
+            alert('already there');
+            text='';
+        }
+
+      })}
 
     (function validate(){
-
+        let arr=[];
         var shows = document.querySelector('#list');
         var form = document.querySelector('form');
         var field = document.querySelector('#newitem');
 
 
-        field.addEventListener('click',function () {
-            return !(field.length < 1 || field.length > 50 || list.includes(field.value));
 
-        });
-
+         var checked=document.getElementsByClassName('is-movie').checked;
         form.addEventListener( 'submit', function( ev ) {
-            var checked = document.getElementById("is-movie").checked;
-
 
             let check= "&#10004";
             if (checked){

@@ -9,7 +9,8 @@
 
 
 
-<input id="text-input">
+<input type="text" name="text-input" id="text-input"
+       placeholder="text-input" onclick=" isValid()" maxlength="50 " minlength="2" required>
 
 <button id="add-text">Add</button>
 
@@ -22,6 +23,15 @@
 </ul>
 
 <script>
+    let textInput = document.querySelector('#text-input');
+    function isValid(){
+        if(textInput.checkValidity()){
+            alert(textInput.validationMessage);
+            text='';
+        }
+
+
+    }
 
 
 
@@ -29,25 +39,20 @@
 
         // Read text from the input
 
-        let textInput = document.querySelector('#text-input')
 
-        let text = textInput.value
+        let text = textInput.value;
 
         // Make new <li> element
 
-        let newListItem = document.createElement('li')
+        let newListItem = document.createElement('li');
 
-        newListItem.innerHTML = text
-
-
+        newListItem.innerHTML = text;
 
         // Find the unordered list
 
-        let list = document.querySelector('#list')
+        let list = document.querySelector('#list');
 
-        list.appendChild(newListItem)
-
-
+        list.appendChild(newListItem);
 
         // Clear text input
 

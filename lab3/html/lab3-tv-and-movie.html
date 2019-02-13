@@ -19,72 +19,68 @@
 
 <!-- Starter page for Lab 3 -->
 
-<form id="#" method="post"><p>Enter a TV show (or movie) you like.</p>
-<label for="show-name"></label><input oninput="isvalid()" id="show-name">
-<input id="is-movie" type="checkbox"><label for="is-movie">Check this box if it is a movie?</label>
-<button id="save">Save to list</button></form>
+<form id="#" method="post" >
 
-<ul id="list">
+    <p>Enter a TV show (or movie) you like.</p>
+
+<label for="show-name"></label><input minlength="2" maxlength="50" id="show-name" required >
+
+<input id="is-movie" type="checkbox"><label for="is-movie">Check this box if it is a movie?</label>
+
+<button id="save"  >Save to list</button>
+</form>
+
+<ul id="list" >
 
 </ul>
 
+
+
 <script>
 
-    var list = document.querySelector('#list');
-    var form = document.querySelector('form');
-    var field = document.querySelector('#show-name');
-    var    save=document.querySelector('save');
+    save.addEventListener( 'submit', function (ev) {
+            var list = document.querySelector('#list');
+            var form = document.querySelector('form');
+            var show_name =document.querySelector('#show-name');
+            var  save=document.querySelector('save');
+            var  spot=document.querySelector('#spot');
+            var showName=document.querySelector('#show-name').value;
+            var lis = document.getElementById("list").getElementsByTagName("li");
+            var lisArray = Array.prototype.slice.call(lis);
 
 
 
-    if (list.contains(field.value)){
-        alert('this show is already in the list');
-        field.value="";
-        field.focus();
+            if (showName !== '') {}
 
-    }
+            else{
+                var isTher = false;
+                if (lis.length !== 0) {
+                    lisArray.forEach(function (el) {
 
+                        if (el.innerHTML ===showName) {
+                            isTher = true;
+                        }
+                    })
+                }
+                if (!isTher) {
+                    var checked=document.getElementById("is-movie").checked;
+                    var list_el = document.createElement("LI");
+                    list_el.innerHTML = `${showName}`;
 
-    function isvalid() {    field.addEventListener('click',function () {
-        if (field.length < 1 || field.length > 50){
-            alert('Item must be between 2 -50 chars');
-            return false; }
-        else {
-            return true;
-        }
-
-    });
-
-
-    }
-
-    (function validate(){
-
-        let list = document.querySelector( '#list' ),
-            form = document.querySelector( 'form' ),
-            field = document.querySelector( '#show-name' );
-        var    save=document.querySelector('save');
-
-
-
-        form.addEventListener( 'submit', function( ev ) {
-
-            var checked = document.getElementById("is-movie").checked;
-
-            let check= "&#10004";
-            if (checked){
-
-                list.innerHTML += '<li class="movie">'+check +field.value + '</li>';
-                field.value = '';
-                field.focus();
-                ev.preventDefault();
-            }else{
-            list.innerHTML += '<li class="tv-show">' + field.value + '</li>';
-            field.value = '';
-            field.focus();
-            ev.preventDefault();}
-        }, false);
-    })();
+                    if (checked)new_list_el.className = "movie";
+                    else {
+                         list_el.className = "tv-show";
+                    }
+                    //Add the new li element to the list.
+                    let list = document.getElementById("list");
+                    list.appendChild(new_list_el);
+                }
+                    else{
+                        alert('text already exist in list');
+                        textInput.value = '';
+                    }
+                }
+            })
     // Script goes here
     /*
     This program is for creating a list of movies and TV shows.

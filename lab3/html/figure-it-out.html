@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fork me i need to figure it out</title>
+
+</head>
+<body>
+<p>please enter item you want to add to the list</p>
+<h1>Please get this</h1>
+<form id="#" method="post" >
+
+<label for="text-input"><input type="text" id="text-input"
+       placeholder="text-input"  maxlength="50 " minlength="2" required>
+
+<button id="add-text" onsubmit="isItInYet()">Add</button>
+</label>
+</form>
+
+
+
+<ul id="list">
+
+    <!-- items will go here when button clicked -->
+
+</ul>
+
+<script>
+    (function (number) {
+        
+
+        let textInput = document.querySelector('#text-input');
+        const list = document.querySelector('#list');
+
+        var lis = document.getElementById("#list").getElementsByTagName("li");
+        var lisArray = Array.prototype.slice.call(lis);
+        var isTher = false;
+        if (textInput.value.isNaN(number)|| textInput.value === '') {
+        }
+
+        if (lis.length !== 0) {
+            lisArray.forEach(function (el) {
+
+                if (el.innerHTML === textInput.value) {
+                    isTher = true;
+                    alert('text already exist in list');
+                    textInput.value = '';
+                }
+            });
+
+
+
+            const checked = document.getElementById("is-movie").checked;
+
+
+
+            let check= "&#10004";
+            if (checked){
+
+                list.innerHTML += '<li class="movie">'+check +textInput.value + '</li>';
+                field.value = '';
+
+                field.focus();
+                ev.preventDefault();
+            }else{
+                list.innerHTML += '<li class="tv-show">' +textInput.value + '</li>';
+                field.value = '';
+                field.focus();
+                ev.preventDefault();}
+        }})
+    ();
+
+
+
+</script>
+</body>
+</html>
