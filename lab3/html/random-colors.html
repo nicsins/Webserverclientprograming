@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavsScript Functions with Arguments</title>
+
+    <style>
+
+        #randomColor {
+            height : 200px;
+            width : 300px;
+            font-size: 20px;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+<!--Can provide arguments to JavaScript functions when called from code
+The argument "this" sends this element as an argument - in this case, the
+button elements sends itself as an argument. -->
+
+<button id='randomColor' onclick="changeToRandomColor(this)">Click me for a random color</button>
+
+
+<button type="submit" id="save" onsubmit="saveColor(this)" > click me to save color</button>
+<ul id="boxes">
+
+
+</ul >
+
+<script>
+
+    function changeToRandomColor(element) {
+
+        element.style.backgroundColor = randomColor();
+
+    }
+
+    function randomColor(element) {
+
+        var r = Math.floor(Math.random() * 255);   //Pick a random number between 0 and 1
+        var g = Math.floor(Math.random() * 255);   //Multiply by 255 to get a number in the correct range
+        var b = Math.floor(Math.random() * 255);   //Then convert it to an int
+
+        //Colors can be created as "rgb(33, 52, 15)" where the numbers are R, G, B values.
+        //This is expected as a string.
+
+        var colorString = "rgb(" + r + ", " + g + ", " + b + ")";
+
+        console.log(colorString);   //Avoid for production apps, OK for developing.
+        // You can see the output from this in the developer JavaScript console.
+
+        return colorString
+
+    }
+    function saveColor(colorstring) {
+
+
+        document.querySelector('#save').addEventListener('click', function(colorstring) {
+
+            // Find the ul list by the id. Note the # in the selector
+
+
+            let my_list_element = document.querySelector("#boxes");
+
+
+
+            //Make a new HTML element for this document, of type <li>
+
+            var new_list_item = document.createElement("li");
+
+
+
+
+
+                // Configure properties of this element. innerHTML can be any text or HTML
+
+                // Format strings use backticks, and ${var} notation
+
+
+                    // language=HTML
+            new_list_item.innerHTML = '<svg width="100" height="100"><rect width="100" height="100" fill="' +  colorstring + '" /></svg> ';
+
+                // Add the new item to as a new child to the unordered list
+
+                my_list_element.appendChild(new_list_item);
+
+                // Increase the count of items added, for the next item
+
+
+
+    })}
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MovieAndTv</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        .tv-show {
+            color: green
+        }
+        .movie {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+<!--<form id="#" method="post" >-->
+
+<p>Enter a TV show (or movie) you like.</p>
+    <script type="text/javascript" src="../js/movieEvents.js"></script>
+
+<label for="show-name"/><input minlength="2" maxlength="50" id="show-name" required >
+
+<input id="is-movie" type="checkbox"><label for="is-movie">Check this box if it is a movie?</label>
+
+<button id="save"  >Save to list</button>
+<!--</form>-->
+
+<ul id="list">
+
+</ul>
+
+
+
+
+</body>
+</html>

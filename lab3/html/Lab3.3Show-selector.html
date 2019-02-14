@@ -17,52 +17,54 @@
     <form action="#" method="post">
         <div>
             <label for="newitem">Add item</label>
-            <input type="text" name="newitem" id="newitem" onsubmit="check_for_item() "
+            <input type="text" name="newitem" id="newitem"
                    placeholder="new item" maxlength="50 " minlength="2" required>
             <br>
             <input id="is-movie" type="checkbox"><label for="is-movie">Check this box if it is a movie?</label>
             <br>
-            <input type="submit" name="save" value="save" >
+            <input type="submit" id="save" name="save" value="save" >
         </div>
     </form>
 </section>
 <footer>
 </footer>
 <script>
-        var lis=document.querySelectorAll('li');
-      function check_for_item(text) {
-         field.addEventListener('submit',function(){
-        if (field.value in lis.entries()){
-            alert('already there');
-            text='';
-        }
 
-      })}
 
-    (function validate(){
+    var showsArr=[];
+
+    (function validate(newChild, oldChild){
         let arr=[];
-        var shows = document.querySelector('#list');
+        var shows = document.querySelector('#list').childNodes;
         var form = document.querySelector('form');
-        var field = document.querySelector('#newitem');
-
+        var show = document.querySelector('#newitem');
+        var save=document.getElementById('save');
 
 
          var checked=document.getElementsByClassName('is-movie').checked;
+
+
         form.addEventListener( 'submit', function( ev ) {
 
-            let check= "&#10004";
+
+                // `list` now contains the HTML of each LI element under the `ul#list` element
+
             if (checked){
 
-                list.innerHTML += '<li class="movie">'+check +field.value + '</li>';
-                field.value = '';
-                field.focus();
+                list.innerHTML += '<li class="movie">'+show.value + '</li>';
+                show.value = '';
+                show.focus();
                 ev.preventDefault();
-            }else{
-                list.innerHTML += '<li class="tv-show">' + field.value + '</li>';
-                field.value = '';
-                field.focus();
+            }else {
+                list.innerHTML += '<li class="tv-show">' + show.value + '</li>';
+                show.value = '';
+                show.focus();
                 ev.preventDefault();}
-        }, false);
+            },false);
+
+        shows.addEventListener('submit',function (ev){
+           var  lis=Array.getElementById('ul#list');
+            console.log(lis)})
 
         shows.addEventListener( 'click', function( ev ) {
             var t = ev.target;
@@ -74,9 +76,8 @@
                 }
             }
             ev.preventDefault();
-        }, false);
+        }, false)})();
 
-    })();
 </script>
 </body>
 </html>

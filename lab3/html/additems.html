@@ -14,7 +14,7 @@
 
 <h1>A list of items</h1>
 
-
+<label for="text"><input type="text" id="text"  minlength="2" maxlength="50"  required></label>
 
 <!--Unordered list, empty when the page loads -->
 
@@ -30,27 +30,36 @@
 
     // Keep track of how many elements have been added
 
-    let newItemNumber = 1
+    let newItem = document.querySelector('#text');
 
 
 
     // Find the add button, and add a click listener
 
+
     document.querySelector('#add').addEventListener('click', function() {
 
         // Find the ul list by the id. Note the # in the selector
 
+
         let my_list_element = document.querySelector("#my-list");
+
+
 
         //Make a new HTML element for this document, of type <li>
 
         var new_list_item = document.createElement("li");
 
+        if(!newItem in document.querySelectorAll('LI').values()){
+
+
+
         // Configure properties of this element. innerHTML can be any text or HTML
 
         // Format strings use backticks, and ${var} notation
+            if ($(newItem) in document.querySelectorAll('li'));
 
-        new_list_item.innerHTML = `New item ${newItemNumber}`;
+        new_list_item.innerHTML = ` ${newItem.value}`;
 
         // Add the new item to as a new child to the unordered list
 
@@ -58,9 +67,11 @@
 
         // Increase the count of items added, for the next item
 
-        newItemNumber++;
+        newItem.value='';
 
-    });
+    }
+    else {alert('already there')
+    newItem.value=''};
 
 
 
@@ -70,7 +81,7 @@
 
         my_list_element.innerHTML = ''
 
-        newItemNumber = 1
+        newItem = 1
 
     })
 

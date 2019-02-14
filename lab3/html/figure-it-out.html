@@ -13,7 +13,7 @@
 <label for="text-input"><input type="text" id="text-input"
        placeholder="text-input"  maxlength="50 " minlength="2" required>
 
-<button id="add-text" onsubmit="isItInYet()">Add</button>
+<button id="add-text" >Add</button>
 </label>
 </form>
 
@@ -26,51 +26,40 @@
 </ul>
 
 <script>
-    (function (number) {
-        
+
+
+document.getElementById("add-text").addEventListener("submit",function () {
+    
 
         let textInput = document.querySelector('#text-input');
         const list = document.querySelector('#list');
 
-        var lis = document.getElementById("#list").getElementsByTagName("li");
+        var lis =  Array.isArray( document.getElementById("#list").getElementsByTagName("li"));
         var lisArray = Array.prototype.slice.call(lis);
         var isTher = false;
-        if (textInput.value.isNaN(number)|| textInput.value === '') {
-        }
+        // if ( textInput.value === '') {
+        // }
+        //
+        // if (lis.length !== -1) {
+        //     if(!lisArray.includes( text.value)){
 
-        if (lis.length !== 0) {
-            lisArray.forEach(function (el) {
+                // Find the ul list by the id. Note the # in the selector
 
-                if (el.innerHTML === textInput.value) {
-                    isTher = true;
-                    alert('text already exist in list');
-                    textInput.value = '';
-                }
-            });
+                let my_list_element = document.querySelector("list");
 
+                //Make a new HTML element for this document, of type <li>
 
+                var new_list_item = document.createElement("li");
 
-            const checked = document.getElementById("is-movie").checked;
+                // Configure properties of this element. innerHTML can be any text or HTML
 
+                // Format strings use backticks, and ${var} notation
 
-
-            let check= "&#10004";
-            if (checked){
-
-                list.innerHTML += '<li class="movie">'+check +textInput.value + '</li>';
-                field.value = '';
-
-                field.focus();
-                ev.preventDefault();
-            }else{
-                list.innerHTML += '<li class="tv-show">' +textInput.value + '</li>';
-                field.value = '';
-                field.focus();
-                ev.preventDefault();}
-        }})
-    ();
-
-
+                new_list_item.innerHTML = ` ${textInput}`;
+        // }else{
+        //     alert('already there')
+        // }return false}});
+        },false );
 
 </script>
 </body>
