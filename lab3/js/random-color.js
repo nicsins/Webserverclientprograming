@@ -48,5 +48,5 @@ document.querySelector('#add').addEventListener('click', function() {
         newItem.value='';
 
     }
-    else {alert('already there')
-        newItem.value=''};
+    else {alert('already there');
+        newItem.value=''}});
