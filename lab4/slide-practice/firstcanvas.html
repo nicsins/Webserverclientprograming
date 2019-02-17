@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first canvases</title>
+    <style>
+        canvas{
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--In the body of a HTML document, create a canvas element. Set height and width, and give it an id-->
+
+
+
+<canvas id="canvas" height="200" width="300">
+</canvas>
+<!--Also in the body, create a script element. Write JavaScript to draw on the canvas here-->
+<script>
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.fillRect(20, 20, 100, 100);
+    context.strokeRect(150, 20, 100, 100);
+
+</script>
+
+</body>
+</html>
