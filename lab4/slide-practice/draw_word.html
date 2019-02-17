@@ -3,38 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Draw Word</title>
+
     <style>
 
         #canvas {
             border: 1px black solid;
         }
 
+
     </style>
 
 </head>
 <body>
+<div >
 
-<!--The source image. Could make invisible with CSS if don't want to see it -->zazaZ
-<img id="dog" src="img/buddypirate.png" >
+    <h2> insert an image</h2>
+    <!--The source image2. Could make invisible with CSS if don't want to see it -->
+<img class="'draw" id="dog" src="img/buddypirate.png" ></div>
 
-<canvas id="canvas" height="500" width="500"><img src="img/buddypirate.png" alt="buddy pic" ></canvas>
+<canvas class="draw" id="canvas" height="50%" width="50%"><img src="img/buddypirate.png" alt="buddy pic" ></canvas>
+<div>
 
-
+<h2>draw on a picture</h2>
+<canvas class="draw" id="canvas2" height="360" width="640"><img src="img/small-cat.jpg" alt="small cat" ></canvas>
+    <br>
+<label for="image-text2"><input name="input2" type="text" id="image-text2" maxlength="20">Type some text here</label>
+    <script async defer src="js/draw_word.js"></script>
+</div>
 
 
 <script>
 
     var canvas = document.getElementById("canvas");
 
-    // Get the image to draw in the canvas
-    // But, we have to make sure the image has loaded before we try and draw it.
-    // So find the image element, and use the onload event to be notified that it has loaded.
+    // Get the image2 to draw in the canvas2
+    // But, we have to make sure the image2 has loaded before we try and draw it.
+    // So find the image2 element, and use the onload event to be notified that it has loaded.
     var image = document.getElementById("dog");
     image.onload = function(){
 
         var context = canvas.getContext("2d");
 
-        //Draw image. drawImage works like a stamp. Specify the x,y of the top left position.
+        //Draw image2. drawImage works like a stamp. Specify the x,y of the top left position.
         context.drawImage(image, 20, 20);
         context.drawImage(image, 300, 100);
         context.drawImage(image, 150, 300);
