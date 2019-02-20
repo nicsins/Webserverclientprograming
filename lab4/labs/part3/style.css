@@ -1,0 +1,11 @@
+#US-map{
+    width: 500px;
+    height: 500px;
+    border: 2px green solid;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    font-family: "Comic Sans MS", "Segoe Print", "Droid Sans Mono Dotted", sans-serif;
+    font-size: xx-large;
+}

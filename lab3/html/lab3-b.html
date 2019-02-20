@@ -13,7 +13,7 @@
 <body>
 <header><h1>Here is your todo list !</h1></header>
 <section>
-    <ul id="list"></ul>
+    <ul id="todolist"></ul>
     <form action="#" method="post">
         <div>
             <label for="newitem">Add item</label>
@@ -26,20 +26,60 @@
 <footer>
 </footer>
 <script>
+    // let field = document.querySelector('#text-input');
+    // function isValid(){
+    //     if(field.checkValidity()){
+    //         alert(field.validationMessage);
+    //         text='';
+    //     }
+    //
+    //
+    // }
+    //
+    //
+    //
+    //
+    // document.querySelector('#add-text').addEventListener('click', function() {
+    //
+    //     // Read text from the input
+    //
+    //
+    //     let text = field.value;
+    //
+    //     // Make new <li> element
+    //
+    //     let newListItem = document.createElement('li');
+    //
+    //     newListItem.innerHTML = text;
+    //
+    //     // Find the unordered list
+    //
+    //     let list = document.querySelector('#list');
+    //
+    //     list.appendChild(newListItem);
+    //
+    //     // Clear text input
+    //
+    //     field.value = ''
+    //
+    //
+    //
+    // })
+
     (function validate(){
 
         var todo = document.querySelector( '#todolist' ),
             form = document.querySelector( 'form' ),
             field = document.querySelector( '#newitem' );
         field.addEventListener('click',function () {
-            if (field.length < 1 || field.length > 50){
-                alert('Item must be between 2 -50 chars');
-           return false; }
-           else {
-               return true;
-            }
+            function isValid(){
+                if(textInput.checkValidity()){
+                    alert(textInput.validationMessage);
+                    text='';
+                }
 
-        });
+
+            }});
         form.addEventListener( 'submit', function( ev ) {
             todo.innerHTML += '<li>' + field.value + '</li>';
             field.value = '';

@@ -23,10 +23,10 @@
 </ul>
 
 <script>
-    let textInput = document.querySelector('#text-input');
+    let field = document.querySelector('#text-input');
     function isValid(){
-        if(textInput.checkValidity()){
-            alert(textInput.validationMessage);
+        if(field.checkValidity()){
+            alert(field.validationMessage);
             text='';
         }
 
@@ -35,12 +35,13 @@
 
 
 
+
     document.querySelector('#add-text').addEventListener('click', function() {
 
         // Read text from the input
 
 
-        let text = textInput.value;
+        let text = field.value;
 
         // Make new <li> element
 
@@ -56,7 +57,7 @@
 
         // Clear text input
 
-        textInput.value = ''
+        field.value = ''
 
 
 
