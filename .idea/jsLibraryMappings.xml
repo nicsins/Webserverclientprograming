@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/lab3/html/additems.html" libraries="{jquery-3.3.1}" />
-    <file url="file://$PROJECT_DIR$/lab3/html/figure-it-out.html" libraries="{jquery-3.3.1}" />
+    <file url="file://$PROJECT_DIR$/lab3/html/lab3/figure-it-out.html" libraries="{jquery-3.3.1}" />
     <file url="PROJECT" libraries="{Chart, bootstrap, jquery, jquery-3.3.1.slim, leaflet, popper}" />
   </component>
 </project>

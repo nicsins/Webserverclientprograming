@@ -38,7 +38,7 @@
 
 <script>
 
-    save.addEventListener( 'submit', function (ev) {
+    save.addEventListener( 'submit', function () {
             var list = document.querySelector('#list');
             var form = document.querySelector('form');
             var show_name =document.querySelector('#show-name');
@@ -64,6 +64,8 @@
                 }
                 if (!isTher) {
                     var checked=document.getElementById("is-movie").checked;
+
+
                     var list_el = document.createElement("LI");
                     list_el.innerHTML = `${showName}`;
 
