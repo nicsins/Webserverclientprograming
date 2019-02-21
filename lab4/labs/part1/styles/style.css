@@ -16,12 +16,7 @@
     box-sizing: border-box;
     margin:auto;}
 
-#bottom{
-    text-align: center;
-    border-bottom-width: thick;
-    border-bottom-style: groove;
-    border-radius: 85%;
-}
+
 
 
 .section-header{
@@ -47,44 +42,6 @@
 }
 
 
-.thick-blue-border {
-    border-color: blue;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 70%;
-}
-
-div h2{
-
-    font-family: Lobster ,"Comic Sans MS", sans-serif;
-    alignment: center;
-    font-size: 200%;
-
-}
-a{
-     color: yellow;
-    text-decoration: none;
-
-}
-span:hover{
-    font-stretch: extra-expanded;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 350%;
-}
-
-a:hover, li:hover{
-     font-size: 150%;
-     font-style: italic;
-     font-stretch:expanded;
-     font-weight: bolder;
- }
-/*li:hover{*/
-    /*font-size: 150%;*/
-    /*font-style: italic;*/
-    /*font-stretch:expanded;*/
-    /*font-weight: bolder;*/
-/*}*/
 body{
 
     font-family: "Comic Sans MS", "Segoe Print","Droid Sans Mono Dotted",sans-serif;
@@ -95,9 +52,7 @@ body{
     padding: auto;
     alignment: center;
 }
-title{
-    font-size: 12px;
-}
+
 h1  {
     font-family: Lobster, "Comic Sans MS",sans-serif;
     font-size: 200%;
