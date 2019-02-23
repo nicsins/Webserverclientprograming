@@ -12,7 +12,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1IjoiY2xhcmFsIiwiYSI6ImNqcmdwenViYTAwcHQ0Ym5yYmZ1Z3E2bjgifQ.QQfUvVaqPsWb_jJbP2gvHg'
 }).addTo(map);
 //custom image
-// var bridgeMarker= new google.maps.Marker
+// var bridgeMarker
 var bridgeIcon= L.icon({
     iconUrl:'../img/Bridge-icon.png',
     iconSize:[25,225],
@@ -20,7 +20,7 @@ var bridgeIcon= L.icon({
 });
 // Add some markers 
 let Verranzo= [	40.6066, -74.0447];
-let VerrazanoMarker = L.marker(Verranzo,{icon:bridgeIcon})
+let VerrazanoMarker = L.marker(Verranzo)
     .bindPopup("Verrazano-Narrows Bridge ,New York, NY <br><img src='../img/Verrazano%20Narrows%20Bridge%2042.jpg' alt='V-NBridge'><br>1298.4m")
     .addTo(map);
 
@@ -49,14 +49,6 @@ let TacomaMka=L.marker(Tacoma).bindPopup("Tacoma Narrows Bridge ,Tacoma and Kits
 
 
 
-// Add a circle
-var metroAreaCircle = L.circle(centerTile, {
-        color: 'green',
-        radius: 30000,
-        fillOpacity: 0.2
-    })
-    .bindPopup("Twin Cities Metro Area")
-    .addTo(map);
 
 let bridgeDate=[
     ['Verrazano-Narrows Bridge' ,'New York, NY' 	,1298.4 ,[	40.6066, -74.0447]],

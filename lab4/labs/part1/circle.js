@@ -23,9 +23,7 @@ canvas.addEventListener("mousemove", function() {
     var x = event.offsetX;
     var y = event.offsetY;   //offsetX, offsetY, may not work in older browsers
     var R=document.getElementById("radius").value;
-    //Draw a filled rectangle centered under the mouse click
-    //x, y is the top left corner, so shift up and left by 5 to center it under the mouse.
-    // var r=document.getElementById("#radius").value;
+
     context.beginPath();
     context.strokeStyle=document.getElementById("color").value;
 

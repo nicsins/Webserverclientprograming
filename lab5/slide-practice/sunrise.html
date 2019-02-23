@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sunriswe</title>
+</head>
+<body>
+<h1>sunrise and sunset times</h1>
+<div>
+    <p>sunrise: </p><p id="sunrise"></p>
+    <br>
+    <p>sunset: </p><p id="sunset"></p>
+</div>
+
+
+<script>
+    if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition( function (position) {
+            console.log(position);
+            getsunTime(position)
+
+        })
+    }else{
+        console.log('no position avaialable')
+    }
+
+function getsunTime(position) {
+        let lat=position.coords.latitude;
+      let long=position.coords.longitude;
+      let url='\n' +
+          'https://api.sunrise-sunset.org/json?lat='+lat+'&lng='+long+'&date=today';
+      fetch(url).then((res)=>{
+          return res.json()
+      }).then( (json) =>{
+          let sunrise=document.querySelector('#sunrise');
+          let sunset=document.querySelector('#sunset');
+          let sunrideTime=json.results.sunrise;
+          sunrise.innerHTML=sunrideTime;
+
+          let sunsetTime=json.results.sunset;
+          sunset.innerHTML=sunsetTime;
+          console.log(json)
+      })
+
+  }
+
+
+</script>
+
+
+</body>
+</html>

@@ -14,8 +14,12 @@ var user = {
         office:"T306"
 
 } ,salary:1234567};
+
+user.email='nic@school.edu';
+
 //prints object as is
 console.log(user);
+
 // prints all data in one line
 console.log(JSON.stringify(user));
 //multiple lines w 2 spac indent
